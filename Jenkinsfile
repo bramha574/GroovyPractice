@@ -9,6 +9,7 @@ def workspace = pwd()
 
 pipeline{
     agent any
+	node{
 	stages{
 		stage ('Build'){
 		steps{
@@ -20,5 +21,6 @@ pipeline{
 		println InetAddress.localHost.canonicalHostName
 		}
 		}
+	}
 	}
 }
