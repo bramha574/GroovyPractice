@@ -9,9 +9,4 @@ stage 'Stage 1'{
 def workspace = pwd()
 echo "workspace=${workspace}"
 }
-stage 'Stage 2'{
-println InetAddress.localHost.canonicalHostName
-host = slave.computer.hostName
-echo "Host name of the node : ${host}"
-}
 }
