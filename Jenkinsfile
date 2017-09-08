@@ -8,5 +8,6 @@ node {
 stage 'Stage 1'
 def workspace = pwd()
 echo "workspace=${workspace}"
+println InetAddress.localHost.canonicalHostName
 }
 
