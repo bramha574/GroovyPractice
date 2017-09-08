@@ -5,9 +5,9 @@ import hudson.EnvVars
 import java.net.URL
 
 pipeline{
- agent {
+ agent any {
 
-	node(win-slave) {
+	node('win-slave') {
 	stages{
 		stage 'Stage 1'{
 		steps{
