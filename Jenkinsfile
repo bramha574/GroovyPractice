@@ -5,13 +5,13 @@ import java.net.URL
 pipeline{
     agent any
 	stages{
-		stage 'Test'{
+		stage ('Test'){
 		steps{
 		def workspace = pwd()
 		echo "workspace=${workspace}"
 		}
 		}
-		stage 'Test'{
+		stage ('Test'){
 		steps{
 		println InetAddress.localHost.canonicalHostName
 		host = slave.computer.hostName
