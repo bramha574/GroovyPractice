@@ -9,13 +9,13 @@ pipeline{
 
     stages {
 	stages{
-		stage 'Stage 1'{
+		stage 'Test'{
 		steps{
 		def workspace = pwd()
 		echo "workspace=${workspace}"
 		}
 		}
-		stage 'Stage 2'{
+		stage 'Test'{
 		steps{
 		println InetAddress.localHost.canonicalHostName
 		host = slave.computer.hostName
