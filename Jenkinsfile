@@ -3,7 +3,6 @@
         agent {
             node {
                 label 'win-slave'
-                customWorkspace "C:/Source"
             }
 
         }
