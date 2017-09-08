@@ -7,7 +7,7 @@ import java.net.URL
 pipeline{
  agent {
 
-	node {
+	node(win-slave) {
 	stages{
 		stage 'Stage 1'{
 		steps{
