@@ -1,12 +1,17 @@
-#!/usr/bin/env groovy
-
-import hudson.model.*
-import hudson.EnvVars
-import java.net.URL
-
 node {
-stage 'Stage 1'{
-def workspace = pwd()
-echo "workspace=${workspace}"
-}
+    stage "Create build output"
+    
+    // Make the output directory.
+    sh "mkdir -p output"
+
+    // Write an useful file, which is needed to be archived.
+    writeFile file: "output/usefulfile.txt", text: "This file is useful, need to archive it."
+
+    // Write an useless file, which is not needed to be archived.
+    writeFile file: "output/uselessfile.md", text: "This file is useless, no need to archive it."
+
+    stage "Archive build output"
+    
+    // Archive the build output artifacts.
+    archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'
 }
