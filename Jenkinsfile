@@ -1,13 +1,9 @@
-#!/usr/bin/env groovy
-
-import hudson.model.*
+mport hudson.model.*
 import hudson.EnvVars
 import java.net.URL
 
 pipeline{
     agent any
-
-    stages {
 	stages{
 		stage 'Test'{
 		steps{
@@ -22,8 +18,5 @@ pipeline{
 		echo "Host name of the node : ${host}"
 		}
 		}
-	      }
 	}
-       }
 }
-
