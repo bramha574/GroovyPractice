@@ -6,7 +6,6 @@
             }
 
         }
-    
     stages {
         stage('Node Details') { 
             steps { 
