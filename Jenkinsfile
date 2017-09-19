@@ -27,7 +27,7 @@
             steps {
                 script {
                     env.RELEASE_SCOPE = input message: 'User input required', ok: 'Release!',
-                            parameters: [choice(name: 'RELEASE_SCOPE', choices: 'patch\minor\major', description: 'What is the release scope?')]
+                            parameters: [choice(name: 'RELEASE_SCOPE', choices: '1\n2\n3', description: 'What is the release scope?')]
                 }
                 echo "${env.RELEASE_SCOPE}"
             }
