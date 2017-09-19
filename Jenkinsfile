@@ -2,7 +2,7 @@
     pipeline {
         agent {
             node {
-                label 'win-slave'
+                label 'linux'
             }
 
         }
@@ -15,12 +15,12 @@
         stage('Test'){
             steps {
                 println InetAddress.localHost.canonicalHostName
-                println "hostname".execute().text
+                println "Printing Test "
             }
         }
         stage('Deploy') {
             steps {
-                println "make publish"
+                println "Printing Deploy"
             }
         }
         stage (promotion){
