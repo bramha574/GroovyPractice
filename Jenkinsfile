@@ -25,5 +25,5 @@ stages {
         }
     }
 }
-
-}//pipeline
+}
+}
