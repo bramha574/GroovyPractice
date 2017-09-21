@@ -16,7 +16,11 @@ stages {
         steps {
             script {
             env.confirmation = input 'Do you want to proceed to the Deployment?'
-            echo ("Confirmation : " + env.confirmation)
+            env.userInput = input
+        id: 'Proceed1', message: 'Was this successful?', parameters: [
+        [$class: 'BooleanParameterDefinition', defaultValue: true, description: '', name: 'Please confirm you agree with this']
+        ]
+            echo ("Confirmation : " + env.userInput)
 
                 env.RELEASE_SCOPE = input message: 'User input required', ok: 'Release!',
                         parameters: [choice(name: 'RELEASE_SCOPE', choices: '1\n2\n3', description: 'What is the release scope?')]
