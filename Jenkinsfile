@@ -4,7 +4,7 @@ pipeline {
             label 'linux'
             def userPasswordInput = input(
             id: 'userPasswordInput', message: 'your password', parameters: [
-                [$class: 'TextParameterDefinition', defaultValue='mb', description: 'vbn', name: 'password']
+                [$class: 'TextParameterDefinition', name: 'Password']
             ]
         )
         }
