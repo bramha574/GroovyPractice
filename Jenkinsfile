@@ -2,11 +2,13 @@ pipeline {
     agent {
         node {
             label 'linux'
-            def userPasswordInput = input(
-            id: 'userPasswordInput', message: 'your password', parameters: [
-                [$class: 'TextParameterDefinition', name: 'Password']
-            ]
-        )
+
+            def userInput =  timeout(time:60, unit:'SECONDS') {input(
+     id: 'userInput', message: 'URL Required', parameters: [
+     [$class: 'TextParameterDefinition', defaultValue: '', description: 'URL', name: 'url'],
+    ])
+  }
+
         }
 
     }
