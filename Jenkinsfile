@@ -2,12 +2,8 @@ pipeline {
     agent {
         node {
             label 'linux'
-
-            def userInput =  timeout(time:60, unit:'SECONDS') {input(
-     id: 'userInput', message: 'URL Required', parameters: [
-     [$class: 'TextParameterDefinition', defaultValue: '', description: 'URL', name: 'url'],
-    ])
-  }
+            def some = ""
+            }
 
         }
 
