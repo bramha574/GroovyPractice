@@ -14,8 +14,8 @@ stages{
 
       stage("Release Inputs") {
           steps {
-              DemoRun{
-                Nothing=""
+              def thing = load 'DemoRun.groovy'
+              thing.call()
               }
           }
       }

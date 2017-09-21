@@ -1,5 +1,6 @@
 
 
+def call(){
 jaas_sensor_step {
 name = "UI"
 pipelinephase = "Build"
@@ -11,4 +12,5 @@ script {
     string(defaultValue: "TEST", description: 'Year ?', name: 'userFlag3')
 }
 echo "${env.RELEASE_SCOPE}"
+}
 }
