@@ -1,11 +1,4 @@
 
-    pipeline {
-        agent {
-            node {
-                label 'linux'
-            }
-
-        }
     stages {
         stage('Node Details') {
             steps {
