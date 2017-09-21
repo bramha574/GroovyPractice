@@ -3,6 +3,7 @@ pipeline {
       node {
         label 'linux'
         def rootDir = pwd()
+        def thing = load 'DemoRun.groovy'
         }
       }
 stages{
@@ -14,7 +15,6 @@ stages{
 
       stage("Release Inputs") {
           steps {
-              def thing = load 'DemoRun.groovy'
               thing.call()
               }
           }
