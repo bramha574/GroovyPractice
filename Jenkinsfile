@@ -16,7 +16,7 @@ stages {
         steps {
             script {
             env.userInput = input message: 'Was this successful?', parameters: [
-        [$class: 'BooleanParameterDefinition', defaultValue: true, description: '', name: 'Please confirm you agree with this']
+        [$class: 'SimpleTextProvider', defaultValue: 'Demo', description: '', name: 'Please confirm you agree with this']
         ]
             echo ("Confirmation : " + env.userInput)
 
