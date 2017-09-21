@@ -4,10 +4,7 @@ pipeline {
             label 'linux'
             def some = ""
             }
-
         }
-
-    }
 stages {
     stage('Node Details') {
         steps {
