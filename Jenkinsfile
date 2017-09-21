@@ -3,8 +3,9 @@ pipeline {
       node {
         label 'linux'
         def rootDir = pwd()
+        }
       }
-}
+stages{
       stage('Node Details') {
           steps {
               println "${NODE_NAME}"
@@ -18,4 +19,5 @@ pipeline {
               }
           }
       }
+    }
 }
