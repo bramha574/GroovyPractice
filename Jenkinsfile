@@ -3,7 +3,6 @@ pipeline {
       node {
         label 'linux'
         def rootDir = pwd()
-        def example = load "${rootDir}@script/DemoRun.Groovy "
       }
 
       stage('Node Details') {
