@@ -16,7 +16,9 @@ stages {
         steps {
             script {
             env.userInput = input message: 'Was this successful?', parameters: [
-      string(defaultValue: "TEST", description: 'Product ID?', name: 'userFlag1')
+      string(defaultValue: "DEFAULT", description: 'Product ID?', name: 'productid')
+      string(defaultValue: "DEFAULT", description: 'Branch?', name: 'branch')
+      string(defaultValue: "DEFAULT", description: 'Year?', name: 'year')
         ]
             echo ("Confirmation : " + env.userInput)
 
