@@ -5,6 +5,7 @@ pipeline {
             }
         }
 stages {
+    parellel(
     stage('Node Details') {
         steps {
             println "${NODE_NAME}"
@@ -17,5 +18,6 @@ stages {
             println "${NODE_NAME}"
     }
 }
+        )
 }
 }
