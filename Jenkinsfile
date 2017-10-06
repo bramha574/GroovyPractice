@@ -5,19 +5,8 @@ pipeline {
             }
         }
 stages {
-    parellel(
-    stage('Node Details') {
-        steps {
-            println "${NODE_NAME}"
-        }
+    stage('Build'){
+    echo "hello"
     }
-
-
-    stage("Test") {
-        steps {
-            println "${NODE_NAME}"
-    }
-}
-        )
 }
 }
